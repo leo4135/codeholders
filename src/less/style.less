@@ -1,0 +1,180 @@
+@black: #000;
+@white: #fff;
+@gray: #2F2E2E;
+@red: #FF0000;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: @black;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 20px 20px;
+
+  position: absolute;
+  width: 1440px;
+  height: 544px;
+  left: 0px;
+  top: 0px;
+  background: @black;
+
+
+  a {
+    position: absolute;
+    width: 599px;
+    height: 132px;
+
+
+
+    color: #FFFFFF;
+  }
+
+  img {
+    position: absolute;
+    width: 484px;
+    height: 431px;
+    left: 802px;
+    top: 113px;
+  }
+  }
+
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  background: @red;
+  border: 1px solid @red;
+  border-radius: 0;
+  font-size: 0.889rem;
+  line-height: 1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 25px;
+  margin: 0;
+  cursor: pointer;
+  transition: 150ms;
+
+  &:hover {
+    background: @white;
+    color: @red;
+  }
+
+  &__outline {
+    background: transparent;
+    color: @red;
+
+    &:hover {
+      background: @red;
+      color: @white;
+    }
+  }
+
+  &__link {
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    color: @red;
+
+    &:hover {
+      color: @white;
+      background: transparent;
+    }
+  }
+
+  &__icon {
+    background: none;
+    padding: 0;
+    border: none;
+
+    &:hover {
+      transform: scale(1.1);
+      background: transparent;
+    }
+  }
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: @black;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 20px 20px;
+
+    img {
+      display: block;
+      width: auto;
+    }
+
+    a {
+      white-space: nowrap;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 0;
+        margin: 0 15px;
+        text-transform: uppercase;
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .contact {
+      line-height: 1.4;
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        font-size: 0.778rem;
+      }
+    }
+
+
+  }
+}
