@@ -159,7 +159,6 @@ body {
       width: 100%;
     }
     img {
-
     }
   }
 }
@@ -230,9 +229,23 @@ body {
     justify-content: space-around;
     align-items: stretch;
     padding: 20px 20px;
+    flex-wrap: wrap;
+    >div{
+      width: calc(50% - 10px);
+      margin-bottom: 10px;
+    }
     .block1{
       background: white;
       padding: 20px 20px;
+
+      .buttonses{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      img{
+        max-width: 100%;
+      }
 
       .text1{
         padding: 20px 0px;
@@ -271,6 +284,60 @@ body {
     .block2{
       background: white;
       padding: 20px 20px;
+
+      .buttonses{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      img{
+        max-width: 100%;
+      }
+      .text1{
+        padding: 20px 0px;
+      }
+      .text2{
+        padding: 20px 0px;
+      }
+      .btn {
+        background: @white;
+        border: 1px solid @red;
+        border-radius: 0;
+        font-size: 0.889rem;
+        line-height: 1;
+        color: @red;
+        padding: 20px 25px;
+        margin: 0;
+        cursor: pointer;
+        transition: 150ms;
+
+        &:hover {
+          background: @red;
+          color: @white;
+        }
+
+        &__outline {
+          background: transparent;
+          color: @red;
+
+          &:hover {
+            background: @red;
+            color: @white;
+          }
+        }
+      }
+    }
+    .block3{
+      max-width: 630px;
+      background: white;
+      padding: 20px 20px;
+      img{
+        max-width: 100%;
+      }
+      .buttonses{
+        display: flex;
+        justify-content: space-between;
+      }
       .text1{
         padding: 20px 0px;
       }
@@ -306,47 +373,72 @@ body {
       }
     }
   }
+}
+
+.uslugi3{
+  background: white;
   .wrapper{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: stretch;
-    padding: 10px 0px;
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    >div{
+      border: 1px solid #C4C4C4;
+    }
+    .block1{
+      max-width: 230px;
+      padding: 30px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .text{
+        padding: 40px 30px;
+        text-align: center;
+      }
+    }
+    .block2{
+      max-width: 230px;
+      padding: 30px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .text{
+        padding: 40px 30px;
+        text-align: center;
+      }
+    }
     .block3{
-      max-width: 630px;
-      background: white;
-      padding: 20px 20px;
-      .text1{
-        padding: 20px 0px;
+      max-width: 230px;
+      padding: 30px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .text{
+        padding: 40px 30px;
+        text-align: center;
       }
-      .text2{
-        padding: 20px 0px;
+    }
+    .block4{
+      max-width: 230px;
+      padding: 30px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .text{
+        padding: 40px 30px;
+        text-align: center;
       }
-      .btn {
-        background: @white;
-        border: 1px solid @red;
-        border-radius: 0;
-        font-size: 0.889rem;
-        line-height: 1;
-        color: @red;
-        padding: 20px 25px;
-        margin: 0;
-        cursor: pointer;
-        transition: 150ms;
-
-        &:hover {
-          background: @red;
-          color: @white;
-        }
-
-        &__outline {
-          background: transparent;
-          color: @red;
-
-          &:hover {
-            background: @red;
-            color: @white;
-          }
-        }
+    }
+    .block5{
+      max-width: 230px;
+      padding: 30px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .text{
+        padding: 40px 30px;
+        text-align: center;
       }
     }
   }
