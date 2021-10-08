@@ -179,7 +179,7 @@ body {
 .company {
   .wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
 
@@ -225,6 +225,15 @@ body {
           }
         }
       }
+    }
+  }
+}
+.imagee{
+  .wrapper{
+   display: flex;
+    align-items: stretch;
+    img{
+      max-width: 100%;
     }
   }
 }
@@ -457,14 +466,21 @@ body {
   }
 }
 
+
+
 .ending{
   background: black;
 
   .wrapper {
     display: flex;
-    padding: 30px 0;
-    display: flex;
-    flex-direction: column;
+    padding: 30px 20px;
+    justify-content: space-between;
+
+    .superblock {
+      display: flex;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
 
     .text {
       max-width: 230px;
@@ -516,6 +532,12 @@ body {
       }
     }
   }
+    .googlemaps{
+      width: 450px;
+      height: 450px;
+      background: red;
+    }
+  }
 
 }
 
@@ -526,6 +548,33 @@ body {
     padding: 20px 0;
     .text{
       color: white;
+    }
+  }
+}
+
+@media all and (max-width: 1023px){
+  html{font-size: 14px;}
+}
+
+@media all and (max-width: 767px) {
+  .company{
+    .wrapper{
+      display: block;
+
+    }
+  }
+
+
+
+  .imagee{
+    width: 500px;
+    .wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      img{
+        max-width: 100%;
+      }
     }
   }
 }
