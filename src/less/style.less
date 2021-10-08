@@ -552,28 +552,32 @@ body {
   }
 }
 
-@media all and (max-width: 1023px){
-  html{font-size: 14px;}
-}
-
-@media all and (max-width: 767px) {
-  .company{
-    .wrapper{
-      display: block;
-
-    }
+@media all and (max-width: 1023px) {
+  html {
+    font-size: 14px;
   }
 
 
+  @media all and (max-width: 767px) {
+    .company {
+      .wrapper {
+        display: block;
 
-  .imagee{
-    width: 500px;
-    .wrapper{
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      img{
-        max-width: 100%;
+      }
+    }
+
+
+    .imagee {
+      width: 500px;
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+
+        img {
+          max-width: 100%;
+        }
       }
     }
   }
