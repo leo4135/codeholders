@@ -152,6 +152,9 @@ header {
       }
     }
 
+    .burger {
+      display: none;
+    }
 
   }
 }
@@ -524,10 +527,12 @@ header {
           display: flex;
           flex-direction: column;
           background: rgba(196, 196, 196, 0.4);
-          max-width: 460px;
-          font-size: 30px;
+          width: 100%;
+          max-width: 100%;
+          font-size: 0.8rem;
           margin: 10px 0px;
-          font-family: Montserrat;
+          font-family: 'Montserrat', sans-serif;
+          padding: 2px 2px;
         }
       }
 
@@ -594,12 +599,105 @@ header {
 
 @media (max-width: 767px) {
 
+  .openMenu{
+    .wrapper{
+      ul{
+        background: black;
+        display: block;
+        width: 100%;
+        position: fixed;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(-20%);
+        transition: .3s;
+        left: 0px;
+        top: 45px;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  header {
+    .wrapper {
+      .burger {
+        height: 4px;
+        left: 0;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+      }
+      .burger, .burger:after, .burger:before {
+        position: relative;
+        width: 32px;
+        height: 2px;
+        display: block;
+        background: red;
+
+        span {
+          top: 20px;
+        }
+      }
+
+      .burger:after, .burger:before {
+        content: '';
+      }
+
+      .burger:after {
+        background: white;
+        bottom: 10px;
+      }
+
+      .burger:before {
+        background: white;
+        top: 8px;
+      }
+
+      img {
+        width: 40%;
+      }
+
+
+      ul {
+        background: black;
+        display: block;
+        width: 100%;
+        position: fixed;
+        visibility: visible;
+        opacity: 0;
+        transform: translateY(-20%);
+        transition: .3s;
+        left: 0px;
+        top: 45px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      a {
+        font-size: 1rem;
+      }
+
+      .contacts {
+        a {
+          display: none;
+        }
+      }
+    }
+
+
+  }
+
   body {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     line-height: 1.2;
     color: @black;
-    padding: 100px 0 0;
+    padding: 60px 0 0;
     margin: 0;
   }
 
@@ -770,6 +868,8 @@ header {
 
         form {
           input {
+            font-family: 'Montserrat', sans-serif;
+            padding: 2px 2px;
             max-width: 100%;
             width: 100%;
             margin: 10px auto;

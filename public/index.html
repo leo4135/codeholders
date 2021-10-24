@@ -4,10 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NormSlovo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </head>
 <body>
-<!--<header>
-    <div class="wrapper">
+<header >
+    <div class="wrapper" >
      <a href="/"><img src="img/logo_1.png">
      </a>
      <ul>
@@ -20,8 +21,11 @@
          <a href="tel:88005559483">8 (800) 555 94 83</a>
          <button class="btn btn__link">Обратный звонок</button>
      </div>
+        <button class="burger" onclick="funcName()">
+            <span></span>
+        </button>
  </div>
-</header>-->
+</header>
 <div class="slide">
     <div class="wrapper">
         <div class="text">
@@ -204,4 +208,7 @@
     </div>
 </div>
 
+<script>
+    window.funcName = function(){document.querySelector('header').classList.toggle('openMenu')};
+</script>
 </body>
