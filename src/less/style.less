@@ -599,9 +599,28 @@ header {
 
 @media (max-width: 767px) {
 
-  .openMenu{
-    .wrapper{
-      ul{
+  .openMenu {
+    .wrapper {
+
+      .burger span {
+        display: none;
+      }
+
+      .burger:before {
+        width: 100%;
+        transform: rotate(44deg);
+        top: 1px;
+        transition: 0.4s;
+      }
+
+      .burger:after {
+        width: 100%;
+        transform: rotate(-44deg);
+        top: -1px;
+        transition: 0.4s;
+      }
+
+      ul {
         background: black;
         display: block;
         width: 100%;
@@ -623,39 +642,41 @@ header {
       .burger {
         height: 4px;
         left: 0;
-        padding-top: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0;
+        padding: 0;
         border-top-width: 0;
         border-bottom-width: 0;
         border-left-width: 0;
         border-right-width: 0;
       }
-      .burger, .burger:after, .burger:before {
+
+      .burger, .burger span, .burger:after, .burger:before {
         position: relative;
         width: 32px;
-        height: 2px;
+        height: 21px;
         display: block;
-        background: red;
+        background: black;
+      }
 
-        span {
-          top: 20px;
-        }
+      .burger span {
+        bottom: 0;
+        background: red;
+        width: 32px;
+        height: 2px;
       }
 
       .burger:after, .burger:before {
         content: '';
+        height: 2px;
       }
 
       .burger:after {
         background: white;
-        bottom: 10px;
+        top: 5px;
       }
 
       .burger:before {
         background: white;
-        top: 8px;
+        bottom: 5px;
       }
 
       img {
