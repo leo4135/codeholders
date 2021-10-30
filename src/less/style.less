@@ -602,6 +602,9 @@ header {
   .openMenu {
     .wrapper {
 
+      .burger{
+        border: none;
+      }
       .burger span {
         display: none;
       }
@@ -611,6 +614,7 @@ header {
         transform: rotate(44deg);
         top: 1px;
         transition: 0.4s;
+        height: 2px;
       }
 
       .burger:after {
@@ -618,6 +622,7 @@ header {
         transform: rotate(-44deg);
         top: -1px;
         transition: 0.4s;
+        height: 2px;
       }
 
       ul {
@@ -643,10 +648,9 @@ header {
         height: 4px;
         left: 0;
         padding: 0;
-        border-top-width: 0;
-        border-bottom-width: 0;
-        border-left-width: 0;
-        border-right-width: 0;
+        border-style: solid;
+        border-left: black;
+        border-right: black;
       }
 
       .burger, .burger span, .burger:after, .burger:before {
@@ -658,25 +662,24 @@ header {
       }
 
       .burger span {
-        bottom: 0;
-        background: red;
-        width: 32px;
-        height: 2px;
+
+
+        height: 0;
       }
 
       .burger:after, .burger:before {
         content: '';
-        height: 2px;
+        height: 1px;
       }
 
       .burger:after {
-        background: white;
-        top: 5px;
+        background: red;
+        bottom: 0;
       }
 
       .burger:before {
-        background: white;
-        bottom: 5px;
+        background: red;
+        bottom: 0;
       }
 
       img {
