@@ -7,14 +7,15 @@
 </head>
 <body>
 <header>
+    <nav data-scroll>
     <div class="wrapper">
         <a href="/"><img src="img/logo_1.png">
         </a>
         <ul>
-            <li><a href="#about">О Компании</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#partners">Клиенты</a></li>
-            <li><a href="#contacts">Контакты</a></li>
+            <li><a class="scroll" data-scroll href="#about">О Компании</a></li>
+            <li><a class="scroll" data-scroll href="#services">Услуги</a></li>
+            <li><a class="scroll" data-scroll href="#partners">Клиенты</a></li>
+            <li><a class="scroll" data-scroll href="#contacts">Контакты</a></li>
         </ul>
         <div class="contacts">
             <a href="tel:88005559483">8 (800) 555 94 83</a>
@@ -24,6 +25,7 @@
             <span></span>
         </button>
     </div>
+    </nav>
 </header>
 <div class="slide">
     <div class="wrapper">
@@ -37,7 +39,7 @@
         </p>
     </div>
 </div>
-<div class="company">
+<div class="company" id="about">
     <div class="wrapper">
         <div class="text1">
             <strong>О КОМПАНИИ</strong>
@@ -60,7 +62,7 @@
         </div>
     </div>
 </div>
-<div class="uslugi">
+<div class="uslugi" id="services">
     <div class="wrapper">
         <strong>Услуги</strong>
     </div>
@@ -121,7 +123,7 @@
 </div>
 <div class="uslugi3">
     <div class="wrapper">
-        <div class="block1">
+        <div class="block1" id="partners">
             <div>
                 <img src="img/logo_1_1.png">
             </div>
@@ -175,7 +177,7 @@
     </div>
 </div>
 
-<div class="ending">
+<div class="ending" id="contacts">
     <div class="wrapper">
         <div class="superblock">
             <div class="text">
@@ -219,7 +221,9 @@
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 
 <script>
-    var scroll = new SmoothScroll('a[href*="#"]');
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        header : '[data-scroll]'
+    });
     scroll.animateScroll(750);
 </script>
 
