@@ -28,6 +28,21 @@
         </div>
     </nav>
 </header>
+
+<div class="callBacker">
+</div>
+<div class="inside">
+    <strong>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</strong>
+    <form>
+        <input type="text" placeholder="Ваше имя">
+        <input type="text" placeholder="Ваш телефон">
+    </form>
+    <div class="buttonses">
+        <button class="btn btn__link">Отправить</button>
+    </div>
+</div>
+<div class="close">
+</div>
 <div class="slide">
     <div class="wrapper">
         <div class="text">
@@ -54,7 +69,7 @@
         </div>
         <div class="text2">
             <p>БИЗНЕС КАК СИСТЕМА — ОСОБЫЙ ПОДХОД В ПОСТРОЕНИИ ИТ-ИНФРАСТРУКТУРЫ.</p>
-            <button class="btn btn__link">Получить консультацию</button>
+            <button class="btn btn__link" onclick="openWin()">Получить консультацию</button>
         </div>
     </div>
     <div class="imagee">
@@ -211,7 +226,7 @@
     </div>
 </div>
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<6660fc99-ce06-4d48-9cca-e949db5ba359>"
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&;apikey=6660fc99-ce06-4d48-9cca-e949db5ba359"
         type="text/javascript"></script>
 <script type="text/javascript">
 
@@ -251,8 +266,13 @@
 
 <script>
     const funcName = function () {
-        document.querySelector('header').classList.toggle('openMenu')
+        document.querySelector('header').classList.toggle('openMenu');
+        let btn = document.querySelector('ul');
+        btn.onclick = function () {
+            document.querySelector('header').classList.toggle('openMenu') // remove тоже сработал
+        };
     };
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
@@ -261,7 +281,21 @@
     var scroll = new SmoothScroll('a[href*="#"]', {
         header: '[data-scroll]'
     });
-    scroll.animateScroll(750);
+</script>
+
+<script>
+    const openWin = function () {
+        document.querySelector('body').classList.toggle('openCall');
+        let cls = document.querySelector('.callBacker');
+        cls.onclick = function () {
+            openWin();
+        }
+        let cls2 = document.querySelector('.close');
+        cls2.onclick = function (){
+            openWin();
+        };
+
+    };
 </script>
 
 
