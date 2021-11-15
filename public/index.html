@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
     <nav data-scroll>
         <div class="wrapper">
@@ -28,21 +29,6 @@
         </div>
     </nav>
 </header>
-
-<div class="callBacker">
-</div>
-<div class="inside">
-    <strong>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</strong>
-    <form>
-        <input type="text" placeholder="Ваше имя">
-        <input type="text" placeholder="Ваш телефон">
-    </form>
-    <div class="buttonses">
-        <button class="btn btn__link">Отправить</button>
-    </div>
-</div>
-<div class="close">
-</div>
 <div class="slide">
     <div class="wrapper">
         <div class="text">
@@ -69,7 +55,7 @@
         </div>
         <div class="text2">
             <p>БИЗНЕС КАК СИСТЕМА — ОСОБЫЙ ПОДХОД В ПОСТРОЕНИИ ИТ-ИНФРАСТРУКТУРЫ.</p>
-            <button class="btn btn__link" onclick="openWin()">Получить консультацию</button>
+            <button class="btn btn__link" onclick="funcName2()">Получить консультацию</button>
         </div>
     </div>
     <div class="imagee">
@@ -96,8 +82,8 @@
                 сложившихся бизнес-процессах и настроить связную и продуманную систему контроля?
             </div>
             <div class="buttonses">
-                <button class="btn btn__link" onclick="openWin()">Получить консультацию</button>
-                <a href="#services" onclick="openWin()"><img src="img/Group.svg"></a>
+                <button class="btn btn__link" onclick="funcName2()">Получить консультацию</button>
+                <a href="#services" onclick="funcName2()"><img src="img/Group.svg"></a>
             </div>
         </div>
         <div class="block2">
@@ -112,8 +98,8 @@
             </div>
             <br>
             <div class="buttonses">
-                <button class="btn btn__link" onclick="openWin()">Получить консультацию</button>
-                <a href="#services" onclick="openWin()"><img src="img/Group.svg"></a>
+                <button class="btn btn__link" onclick="funcName2()">Получить консультацию</button>
+                <a href="#services" onclick="funcName2()"><img src="img/Group.svg"></a>
             </div>
         </div>
 
@@ -128,8 +114,8 @@
                 задачам ведения учета на предприятии.
             </div>
             <div class="buttonses">
-                <button class="btn btn__link" onclick="openWin()">Получить консультацию</button>
-                <a href="#services" onclick="openWin()"><img src="img/Group.svg"></a>
+                <button class="btn btn__link" onclick="funcName2()">Получить консультацию</button>
+                <a href="#services" onclick="funcName2()"><img src="img/Group.svg"></a>
             </div>
         </div>
         <div class="none">
@@ -226,6 +212,24 @@
     </div>
 </div>
 
+<div class="formWindow" onclick="close">
+    <div class="openCall">
+        <button class="close" onclick="funcName2()">
+            <span></span>
+        </button>
+        <strong>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</strong>
+        <form onclick="e">
+            <input type="text" placeholder="Введите Ваше ФИО">
+            <input type="email" placeholder="Введите ваш e-mail">
+        </form>
+        <div class="buttonses" onclick="e">
+            <button class="btn btn__link">Отправить</button>
+        </div>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&;apikey=6660fc99-ce06-4d48-9cca-e949db5ba359"
         type="text/javascript"></script>
 <script type="text/javascript">
@@ -238,24 +242,24 @@
                 searchControlProvider: 'yandex#search'
             }),
 
-            // Создаём макет содержимого.
+// Создаём макет содержимого.
             MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                '<div style = "color: #FFFFFF; font-weight: bold;"> $[properties.iconContent] </div>'
             ),
 
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
                 hintContent: 'Собственный значок метки',
                 balloonContent: 'Это красивая метка'
             }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
+// Опции.
+// Необходимо указать данный тип макета.
                 iconLayout: 'default#image',
-                // Своё изображение иконки метки.
+// Своё изображение иконки метки.
                 iconImageHref: 'img/01_1.png',
-                // Размеры метки.
+// Размеры метки.
                 iconImageSize: [14, 20],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
+// Смещение левого верхнего угла иконки относительно
+// её "ножки" (точки привязки).
                 iconImageOffset: [-5, -38]
             })
         myMap.geoObjects
@@ -272,31 +276,20 @@
             document.querySelector('header').classList.toggle('openMenu') // remove тоже сработал
         };
     };
-
-</script>
-
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
+    let scroll = new SmoothScroll('a[href*="#"]', {
         header: '[data-scroll]'
     });
+
+    const funcName2 = function () {
+        document.querySelector('.formWindow').classList.toggle('openForm');
+    }
+
+
+    let close = document.querySelector('.formWindow');
+    close.onclick = function (event) {
+        event.target.classList.toggle('openForm');
+    }
+
 </script>
-
-<script>
-    const openWin = function () {
-        document.querySelector('body').classList.toggle('openCall');
-        let cls = document.querySelector('.callBacker');
-        cls.onclick = function () {
-            openWin();
-        }
-        let cls2 = document.querySelector('.close');
-        cls2.onclick = function (){
-            openWin();
-        };
-
-    };
-</script>
-
 
 </body>

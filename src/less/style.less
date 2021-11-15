@@ -179,118 +179,6 @@ header {
   }
 }
 
-.openCall {
-  .callBacker {
-    display: block;
-  }
-
-  .inside {
-    border-radius: 0 1em 0 0;
-    display: flex;
-  }
-
-  .close, .close:before, .close:after {
-    position: fixed;
-    width: 3%;
-    height: 5%;
-    background: #FF0000;
-    margin: 13.5% 63.5%;
-    border-radius: 10em;
-  }
-
-  .close:before {
-    width: 2%;
-    margin: 1.2% 0.5%;
-    content: '';
-    background: white;
-    transform: rotate(44deg);
-    height: 2px;
-  }
-
-  .close:after {
-width: 2%;
-    margin: 1.2% 0.5%;
-    content: '';
-    background: white;
-    transform: rotate(-44deg);
-    height: 2px;
-  }
-
-}
-
-.callBacker {
-  display: none;
-  width: 100%;
-  height: 120%;
-  opacity: 0.7;
-  position: fixed;
-  background: white;
-
-}
-
-.inside {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  background: black;
-  width: 25%;
-  color: @white;
-  margin: 15% 40%;
-  padding: 10px 10px;
-
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
-
-    input {
-      display: flex;
-      flex-direction: column;
-      background: rgba(196, 196, 196, 0.4);
-      width: 100%;
-      max-width: 100%;
-      font-size: 0.8rem;
-      margin: 5px 0;
-      font-family: 'Montserrat', sans-serif;
-      padding: 2px 2px;
-    }
-  }
-
-  .btn {
-    background: @red;
-    border: 1px solid @red;
-    border-bottom: 0;
-    border-radius: 0;
-    font-size: 0.889rem;
-    line-height: 1;
-    color: @white;
-    padding: 20px 25px;
-    margin: 0;
-    cursor: pointer;
-    transition: 150ms;
-    text-decoration: red;
-
-
-    &:hover {
-      background: @red;
-      color: @white;
-    }
-
-    &__outline {
-      background: transparent;
-      color: @red;
-
-      &:hover {
-        background: @white;
-        color: @red;
-      }
-    }
-  }
-}
 
 .company {
   .wrapper {
@@ -710,6 +598,112 @@ width: 2%;
       color: white;
     }
   }
+}
+
+
+.formWindow {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+
+  .openCall {
+    position: relative;
+    padding: 1rem 1rem;
+    text-align: center;
+    background: black;
+    width: 25%;
+    height: 25%;
+    opacity: 1;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    .close{
+      position: absolute;
+      right: -6%;
+      bottom: 90%;
+      border-radius: 100%;
+      background: red;
+      width: 10%;
+      height: 18%;
+      border: red;
+    }
+
+    .close:before, .close:after {
+      position: absolute;
+      content: '';
+      height: 5%;
+      width: 90%;
+      background: white;
+    }
+
+    .close:before {
+      left: 4%;
+      transform: rotate(-44deg);
+    }
+
+    .close:after {
+      left: 4%;
+      transform: rotate(44deg);
+    }
+
+
+    strong {
+      color: white;
+    }
+
+
+
+    form {
+      width: 50%;
+      padding: 1rem 0;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .btn {
+      background: @red;
+      border: 1px solid @red;
+      border-radius: 0;
+      font-size: 0.889rem;
+      line-height: 1;
+      color: @white;
+      padding: 1rem 1rem;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: 150ms;
+
+      &:hover {
+        background: @red;
+        color: @white;
+      }
+
+      &__outline {
+        background: transparent;
+        color: @white;
+
+        &:hover {
+          background: @white;
+          color: @white;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+.openForm {
+  display: flex;
 }
 
 @media all and (max-width: 1023px) {
