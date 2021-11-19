@@ -30,7 +30,16 @@
     </nav>
 </header>
 <div class="slide">
-    <div class="wrapper">
+
+        <div class="slide1">
+        <div class="text">
+            <h2>НЕОБХОДИМА НАСТРОЙКА КОНФИГУРАЦИИ 1С?</h2>
+            <p>Мы поможем настроить систему учета под цели и задачи вашего бизнеса, автоматизировать рутинные
+                операции!</p>
+        </div>
+        <img src="img/pict_01_1.png">
+        </div>
+    <div class="slide1">
         <div class="text">
             <h2>НЕОБХОДИМА НАСТРОЙКА КОНФИГУРАЦИИ 1С?</h2>
             <p>Мы поможем настроить систему учета под цели и задачи вашего бизнеса, автоматизировать рутинные
@@ -38,6 +47,7 @@
         </div>
         <img src="img/pict_01_1.png">
     </div>
+
 </div>
 <div class="company" id="about">
     <div class="wrapper">
@@ -219,12 +229,17 @@
         <form>
             <input type="text" placeholder="Введите Ваше ФИО">
             <input type="email" placeholder="Введите ваш e-mail">
-            <button class="btn btn__link">Отправить</button>
+            <button class="btn btn__link" type="button">Отправить</button>
         </form>
 
     </div>
 
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&;apikey=6660fc99-ce06-4d48-9cca-e949db5ba359"
         type="text/javascript"></script>
@@ -285,6 +300,19 @@
     close.onclick = function (event) {
         event.target.classList.toggle('openForm');
     }
+
+
+    var slider = tns({
+        container: '.slide',
+        items: 1,
+        controls: false,
+        autoplayButtonOutput: false,
+        nav: false,
+        slideBy: 'page',
+        autoplay: true
+    });
+</script>
+
 
 </script>
 

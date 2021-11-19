@@ -162,21 +162,30 @@ header {
 .slide {
   background: @black;
   margin: 0 auto;
+  display: flex;
 
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: @white;
+
+
+
+    .slide1 {
+      max-width: 1240px;
+      margin: 0 auto ;
+      padding: 0 20px ;
+      display: flex !important;
+      justify-content: space-between ;
+      align-items: center ;
+      color: @white ;
 
     .text {
-      max-width: 688px;
-      width: 100%;
+      max-width: 688px ;
+      width: 100% ;
     }
 
     img {
     }
   }
+
+
 }
 
 
@@ -849,18 +858,14 @@ header {
 
   .slide {
     width: 100%;
-
-    margin: 0 auto;
-    padding-top: 1%;
-    padding: 1% 5%;
-    padding-bottom: 0;
+    display: flex;
+    padding: 10px;
 
 
-    .wrapper {
-      display: block;
+    .slide1 {
+      flex-direction: column-reverse;
       width: 100%;
-      padding: 0 0;
-      justify-content: center;
+      margin: 0 auto;
 
       img {
         width: 100%;
@@ -1054,6 +1059,24 @@ header {
     }
   }
 
+
+  .formWindow {
+    .openCall {
+      width: 70%;
+      height: 45%;
+      .close {
+        bottom: 94%;
+        height: 10%;
+      }
+      form {
+        width: 100%;
+        margin: 0 0;
+        .btn {
+          margin: 5% auto;
+        }
+      }
+    }
+  }
 }
 
 
