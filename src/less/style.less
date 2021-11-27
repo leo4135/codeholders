@@ -96,6 +96,7 @@ a {
 }
 
 
+
 header {
   position: fixed;
   z-index: 2;
@@ -159,13 +160,33 @@ header {
   }
 }
 
+
+.tns-outer {
+  .tns-nav {
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    left: 7%;
+    background: none;
+
+    button {
+      margin: 10px 10px;
+      background: white;
+      border-radius: 100%;
+      width: 15px;
+      height: 15px;
+      border: black;
+    }
+  }
+}
+.tns-nav-active {
+  background: red !important;
+}
+
 .slide {
   background: @black;
   margin: 0 auto;
   display: flex;
-
-
-
 
     .slide1 {
       max-width: 1240px;
@@ -636,13 +657,13 @@ header {
     align-items: center;
 
     .close {
-      position: absolute;
-      right: -6%;
-      bottom: 90%;
+      position: relative;
+      right: -3%;
+      bottom: 120%;
       border-radius: 100%;
       background: red;
-      width: 10%;
-      height: 18%;
+      width: 20px;
+      height: 20px;
       border: red;
     }
 
@@ -1065,8 +1086,7 @@ header {
       width: 70%;
       height: 45%;
       .close {
-        bottom: 94%;
-        height: 10%;
+        height: 20px;
       }
       form {
         width: 100%;
